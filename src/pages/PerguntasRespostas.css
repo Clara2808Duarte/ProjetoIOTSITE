@@ -1,0 +1,75 @@
+body {
+  background: #f5f7fa;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.cont {
+  text-align: center;
+  max-width: 1200px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.cards-vira {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.cad-vira .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-frent,
+.card-tras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  transition: background 0.3s;
+}
+
+.card-frent {
+  background: #ffffff;
+  color: #333;
+  font-weight: 600;
+}
+
+.card-frent:hover {
+  background: #e8f0ff;
+}
+
+.card-tras {
+  background: #4b7bec;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
