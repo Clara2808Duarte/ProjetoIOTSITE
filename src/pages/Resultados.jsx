@@ -1,5 +1,12 @@
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+
 function Resultados() {
   return (
+    <>
+    <Header />
+    <Nav />
     <section>
       <h2>Resultados e Conclusão</h2>
 
@@ -91,6 +98,8 @@ Dados enviados: {"temperatura":25.80,"umidade":62.30,"qualidade_ar":1855}
       </p>
 
     </section>
+    <Footer/>
+    </>
   );
 }
 

@@ -1,9 +1,14 @@
 import VideoW from "../assets/wokwiVideo.mp4";
 import CircuitoImg from "../assets/ImgWokwi.png"; 
-// import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function SimulacaoWokwi() {
   return (
+    <>
+    <Header />
+    <Nav />
     <div>
       <header>
         <h1>Simulação Wokwi</h1>
@@ -71,8 +76,9 @@ export default function SimulacaoWokwi() {
       </main>
 
       <footer>
-        {/* <Footer/> */}
+        <Footer/>
       </footer>
     </div>
+    </>
   );
 }

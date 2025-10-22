@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./PerguntasRespostas.css";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const perguntasRespostas = [
   {
@@ -123,6 +126,9 @@ export default function PerguntasRespostas() {
   };
 
   return (
+    <>
+    <Header />
+    <Nav />
     <div className="cont">
       <h1>PERGUNTAS E RESPOSTAS</h1>
       <div className="cards-vira">
@@ -140,5 +146,7 @@ export default function PerguntasRespostas() {
         ))}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
