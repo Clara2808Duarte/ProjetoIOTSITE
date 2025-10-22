@@ -52,8 +52,6 @@ export default function Footer() {
           <p><FaFacebook /> Facebook: facebook.com/weathernetoficial</p>
 
           <p><strong>Missão:</strong> Tornar o monitoramento ambiental acessível, inteligente e sustentável.</p>
-          <p><strong>Visão:</strong> Ser referência na América Latina em tecnologia para análise climática e ambiental.</p>
-          <p><strong>Valores:</strong> Inovação · Transparência · Sustentabilidade · Responsabilidade Social</p>
         </div>
       </div>
 
