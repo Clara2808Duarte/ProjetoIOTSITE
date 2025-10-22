@@ -1,0 +1,114 @@
+/* ------------------------------------------------------------------- */
+/* ESTILOS GLOBAIS DE LAYOUT E TIPOGRAFIA (Baseados no React App) */
+/* ------------------------------------------------------------------- */
+
+.font-sans {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilo Base para a Seção (section) */
+.section {
+    padding: 1.5rem; /* p-6 */
+    background-color: #f9fafb; /* bg-gray-50 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    margin-bottom: 1.5rem;
+}
+
+/* Título Principal (h2) */
+.section h2 {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    color: #1f2937; /* text-gray-800 */
+    border-bottom: 2px solid #3b82f6; /* border-b pb-2 */
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+/* Estilo da Grade (Grid e Responsividade) */
+.grid {
+    display: grid;
+    gap: 1.5rem; /* gap-6 */
+    text-align: center;
+    margin-top: 2rem; /* mt-8 */
+}
+@media (min-width: 768px) {
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ------------------------------------------------------------------- */
+/* ESTILOS DOS CARDS DE COMPONENTES */
+/* ------------------------------------------------------------------- */
+
+.p-4 { padding: 1rem; }
+.bg-white { background-color: #ffffff; }
+.rounded-lg { border-radius: 0.5rem; }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); }
+.border-t-4 { border-top-width: 4px; }
+
+/* Títulos dos Cards (h3) */
+.section .grid h3 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* text-gray-800 */
+    margin-top: 0;
+    margin-bottom: 0.25rem; /* mb-1 */
+}
+
+/* Texto de Descrição dos Cards (p) */
+.section .grid p {
+    font-size: 0.875rem; /* text-sm */
+    color: #4b5563; /* text-gray-600 */
+}
+
+/* Cores de Borda dos Cards */
+.card-indigo { border-top-color: #6366f1; /* indigo-500 */ }
+.card-teal { border-top-color: #14b8a6; /* teal-500 */ }
+.card-blue { border-top-color: #3b82f6; /* blue-500 */ }
+
+/* Cores Específicas (LEDs - Yellow) */
+.section > .grid > div:nth-child(4) { 
+    border-top-color: #f59e0b; /* yellow-500 */
+}
+
+/* Cores Específicas (Protoboard - Gray) */
+.section > .grid > div:nth-child(5) { 
+    border-top-color: #9ca3af; /* gray-400 */
+}
+
+/* Estilo para Ícones (W-8 H-8) */
+.section svg {
+    width: 2rem;
+    height: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+}
+
+/* ------------------------------------------------------------------- */
+/* ESTILOS DA SEÇÃO DE ALERTA (Tensão Crítica) */
+/* ------------------------------------------------------------------- */
+
+.mt-8 { margin-top: 2rem; }
+.pt-4 { padding-top: 1rem; }
+.border-t { border-top-width: 1px; }
+.border-gray-200 { border-top-color: #e5e7eb; }
+
+/* Título da Seção de Alerta (h4) */
+.section .border-t h4 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 0.75rem; /* mb-3 */
+}
+
+/* Caixa de Alerta */
+.bg-red-50 { background-color: #fef2f2; }
+.p-3 { padding: 0.75rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.border { border-width: 1px; }
+.border-red-300 { border-color: #fca5a5; }
+.text-red-700 { color: #b91c1c; }
