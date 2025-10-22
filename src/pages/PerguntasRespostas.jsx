@@ -138,7 +138,7 @@ export default function PerguntasRespostas() {
     <Nav />
     <div className="cont">
         <br/>
-      <h1>PERGUNTAS E RESPOSTAS</h1>
+      <h1 className="h1">PERGUNTAS E RESPOSTAS</h1>
       <br/>
       <br/>
       <div className="cards-vira">
