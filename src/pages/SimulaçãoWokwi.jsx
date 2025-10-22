@@ -1,7 +1,6 @@
-
 import VideoW from "../assets/wokwiVideo.mp4";
 import CircuitoImg from "../assets/ImgWokwi.png"; 
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 
 export default function SimulacaoWokwi() {
   return (
@@ -29,7 +28,7 @@ export default function SimulacaoWokwi() {
           <div>
             <div>
               <video width="490" height="350" controls>
-                {/* <source src={VideoW} type="video/mp4" /> */}
+                <source src={VideoW} type="video/mp4" />
               </video>
               <p>
                 Simulação do circuito com LED, sensor de gás, temperatura e
@@ -43,9 +42,9 @@ export default function SimulacaoWokwi() {
         <section id="imagem-projeto">
           <h2>Imagem do Projeto no Wokwi</h2>
           <img
-            // src={CircuitoImg}
+            src={CircuitoImg}
             alt="Circuito montado no Wokwi"
-            width="500"
+            width="490"
             style={{ borderRadius: "8px", marginBottom: "10px" }}
           />
           <p>
@@ -72,7 +71,7 @@ export default function SimulacaoWokwi() {
       </main>
 
       <footer>
-        <Footer/>
+        {/* <Footer/> */}
       </footer>
     </div>
   );
