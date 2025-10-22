@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import "./Banner.css";
 import bannerImage from "../assets/BannerText.png"; 
+import HardWare from "../assets/Hardware.jpeg";
 
 export default function Home() {
   return (
@@ -71,8 +72,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div>
-          <h4 className="section-challenge">Objetivo do Projeto</h4>
+        <div className="Flex">
+        <div className="section-obj">
+          <h4 className="section-challenge"> Objetivo do Projeto </h4>
           <p>
             O WeatherNet é um projeto acadêmico desenvolvido com o objetivo de
             criar uma estação meteorológica IoT compacta e inteligente, capaz de
@@ -90,6 +92,11 @@ export default function Home() {
             se integrar para o desenvolvimento de soluções inteligentes e
             conectadas.
           </p>
+        </div>
+
+        <div> 
+          <img src={HardWare} alt="Banner sustentabilidade" className="banner-image" />
+        </div>
         </div>
       </section>
 
