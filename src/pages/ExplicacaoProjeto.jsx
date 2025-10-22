@@ -6,7 +6,7 @@ import Header from "../components/Header";
 
 export default function MonitoramentoIOT() {
   return (
-    <div className="monitoramento-page">
+    <div>
       <Header />
       <Nav />
 
