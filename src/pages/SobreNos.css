@@ -1,8 +1,6 @@
 body {
   background: linear-gradient(135deg, #e8efff, #fff9f9);
   font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
   align-items: start;
   min-height: 100vh;
   padding: 30px;
@@ -14,13 +12,13 @@ body {
 }
 
 .tit{
-  color: #444;
+  color: #007b33;
   margin-bottom: 10px;
   font-size: 2.2rem;
 }
 
 .subtit {
-  color: #777;
+  color: #0c0c0c;
   margin-bottom: 40px;
   font-size: 1.1rem;
 }
@@ -33,6 +31,8 @@ body {
 
 .cards {
   background: #fff;
+  display: flex;
+  flex-direction: column;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -67,23 +67,45 @@ body {
   filter: brightness(1.2) contrast(1.2);
 }
 
-.glow {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  pointer-events: none;
+.cards-0 .glow {
   background: conic-gradient(
     from 0deg,
     #ff9ff3,
     #feca57,
-    #1dd1a1,
-    #54a0ff,
-    #5f27cd,
+    #ff6b6b,
+    #feca57,
     #ff9ff3
   );
-  animation: rotate 4s linear infinite;
-  opacity: 0;
-  transition: opacity 0.5s;
+}
+.cards-1 .glow {
+  background: conic-gradient(
+    from 0deg,
+    #1dd1a1,
+    #10ac84,
+    #00d2d3,
+    #10ac84,
+    #1dd1a1
+  );
+}
+.cards-2 .glow {
+  background: conic-gradient(
+    from 0deg,
+    #54a0ff,
+    #2e86de,
+    #5f27cd,
+    #2e86de,
+    #54a0ff
+  );
+}
+.cards-3 .glow {
+  background: conic-gradient(
+    from 0deg,
+    #f368e0,
+    #ee5253,
+    #ff9ff3,
+    #ee5253,
+    #f368e0
+  );
 }
 
 .imag-conter:hover .glow {
@@ -100,12 +122,12 @@ body {
 }
 
 .nome {
-  color: #333;
+  color: #0e0e0e;
   margin: 10px 0 5px 0;
 }
 
 .desc {
-  color: #666;
+  color: #090909;
   font-size: 0.95rem;
   line-height: 1.4;
 }
