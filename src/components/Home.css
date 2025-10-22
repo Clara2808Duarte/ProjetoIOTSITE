@@ -1,4 +1,3 @@
-
 /* Títulos */
 .section-title {
   font-size: 2.25rem;
@@ -74,8 +73,10 @@
 }
 
 .banner {
-margin-top: 25px;
-  width: 97%;
+  margin-top: 25px;
+  width: 100%;                    /* Agora respeita o container */
+  max-width: 1555px;              /* Opcional, se quiser limitar */
+  margin: 0 auto;                 /* Centraliza horizontalmente */
   height: 150px; 
   background-image: url(${bannerImage});
   background-size: cover;
@@ -86,7 +87,10 @@ margin-top: 25px;
   justify-content: center;
   text-align: center;
   padding: 0 1rem;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
+
 
 .banner-text {
   color: white;
