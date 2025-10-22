@@ -1,11 +1,17 @@
 import SimulacaoWokwi from "./pages/SimulacaoWokwi";
-import Eplicaçãoprojeto from "./pages/ExplicacaoProjeto";
+import Explicaçãoprojeto from "./pages/ExplicacaoProjeto";
+import Header from "./components/Header";
+import Navbar from "./components/Nav";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
+      <Header />
+      <Navbar />
       <SimulacaoWokwi />
-      <Eplicaçãoprojeto />
+      <Explicaçãoprojeto />
+      <Footer />
     </>
   );
 }
