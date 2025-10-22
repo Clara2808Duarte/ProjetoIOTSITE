@@ -1,0 +1,108 @@
+/* ------------------------------------------------------------------- */
+/* SEÇÃO PRINCIPAL - Software                                           */
+/* ------------------------------------------------------------------- */
+
+.software-section {
+  padding: 1.5rem;
+  margin: 10rem;
+  margin-bottom: -1px;
+}
+
+/* ------------------------------------------------------------------- */
+/* TÍTULOS E SUBTÍTULOS                                                */
+/* ------------------------------------------------------------------- */
+
+.software-section h2 {
+    font-weight: 700;
+  color: #004d1a;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: -150px;
+  font-size: 2.3rem;
+  padding-bottom: 0.5rem;
+}
+
+.software-section h3 {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600;
+  color: #00882d;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid #00882d;
+  padding-left: 0.5rem;
+}
+
+/* ------------------------------------------------------------------- */
+/* PARÁGRAFOS, LISTAS E TEXTOS                                         */
+/* ------------------------------------------------------------------- */
+
+.software-section p {
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.software-section ul,
+.software-section ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.software-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* ------------------------------------------------------------------- */
+/* CÓDIGOS E TRECHOS DESTACADOS                                        */
+/* ------------------------------------------------------------------- */
+
+.software-section code {
+  background-color: #e5e7eb;
+  color: #000000;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+}
+
+.software-section pre {
+  background-color: #00882d;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------------------------------------------------------- */
+/* LINKS                                                               */
+/* ------------------------------------------------------------------- */
+
+.software-section a {
+  color: #004d1a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.software-section a:hover {
+  color: #007427;
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------------------- */
+/* DESTAQUES VISUAIS                                                   */
+/* ------------------------------------------------------------------- */
+
+.software-section strong {
+  color: #111827;
+}
+
+.software-section ol li::marker {
+  color: #004d1a;
+  font-weight: bold;
+}
+

@@ -1,52 +1,50 @@
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import "./Software.css";
 
 function Software() {
   return (
     <>
+      <Header />
+      <Nav />
+      <section className="software-section">
+        <h2>Software</h2>
 
-    <Header />
-    <Nav />
-    <section>
-      <h2>Software</h2>
+        <p>
+          A parte de software do projeto é responsável por fazer toda a lógica e comunicação entre os sensores, 
+          o microcontrolador ESP32 e o servidor MQTT. Ela garante que as leituras de temperatura, umidade e qualidade do ar 
+          (MQ-135) sejam coletadas corretamente e enviadas pela internet para visualização em tempo real.
+        </p>
 
-      <p>
-        A parte de software do projeto é responsável por fazer toda a lógica e comunicação entre os sensores, 
-        o microcontrolador ESP32 e o servidor MQTT. Ela garante que as leituras de temperatura, umidade e qualidade do ar 
-        (MQ-135) sejam coletadas corretamente e enviadas pela internet para visualização em tempo real.
-      </p>
+        <h3>1. Ferramentas utilizadas</h3>
+        <ul>
+          <li>
+            <strong>IDE Arduino</strong> — ambiente de desenvolvimento usado para programar o ESP32.
+          </li>
+          <li>
+            <strong>Bibliotecas</strong>:
+            <ul>
+              <li><code>WiFi.h</code> — conecta o ESP32 à rede Wi-Fi.</li>
+              <li><code>PubSubClient.h</code> — gerencia a comunicação MQTT com o broker Mosquitto.</li>
+              <li><code>DHT.h</code> — faz a leitura do sensor de temperatura e umidade DHT11.</li>
+            </ul>
+          </li>
+        </ul>
 
-      <h3>1. Ferramentas utilizadas</h3>
-      <ul>
-        <li>
-          <strong>IDE Arduino</strong> — ambiente de desenvolvimento usado para programar o ESP32.
-        </li>
-        <li>
-          <strong>Bibliotecas</strong>:
-          <ul>
-            <li><code>WiFi.h</code> — conecta o ESP32 à rede Wi-Fi.</li>
-            <li><code>PubSubClient.h</code> — gerencia a comunicação MQTT com o broker Mosquitto.</li>
-            <li><code>DHT.h</code> — faz a leitura do sensor de temperatura e umidade DHT11.</li>
-          </ul>
-        </li>
-      </ul>
+        <h3>2. Fluxo do Programa</h3>
+        <p>O código segue uma estrutura simples, mas eficiente:</p>
+        <ol>
+          <li>Inicializa as bibliotecas e define as credenciais do Wi-Fi.</li>
+          <li>Conecta o ESP32 à rede local.</li>
+          <li>Estabelece conexão com o <strong>broker MQTT</strong> (Mosquitto).</li>
+          <li>Realiza leituras periódicas dos sensores DHT11 e MQ-135.</li>
+          <li>Publica as informações coletadas nos tópicos MQTT definidos em formato JSON.</li>
+          <li>Repete o ciclo a cada poucos segundos.</li>
+        </ol>
 
-      <h3>2. Fluxo do Programa</h3>
-      <p>
-        O código segue uma estrutura simples, mas eficiente:
-      </p>
-      <ol>
-        <li>Inicializa as bibliotecas e define as credenciais do Wi-Fi.</li>
-        <li>Conecta o ESP32 à rede local.</li>
-        <li>Estabelece conexão com o <strong>broker MQTT</strong> (Mosquitto).</li>
-        <li>Realiza leituras periódicas dos sensores DHT11 e MQ-135.</li>
-        <li>Publica as informações coletadas nos tópicos MQTT definidos em formato JSON.</li>
-        <li>Repete o ciclo a cada poucos segundos.</li>
-      </ol>
-
-      <h3>3. Exemplo de Código Completo e Funcional (Arduino)</h3>
-      <pre>{`#include <WiFi.h>
+        <h3>3. Exemplo de Código Completo e Funcional (Arduino)</h3>
+         <pre>{`#include <WiFi.h>
 #include <PubSubClient.h>
 #include "DHT.h"
 
@@ -150,49 +148,38 @@ void loop() {
 }
 `}</pre> 
 
-      <h3>4. Explicação do Código </h3>
-      <ul>
-        <li>
-          <strong>DHTPIN (15)</strong>: define o pino onde o sensor DHT11 está conectado.
-        </li>
-        <li>
-          <strong>MQ135\_PIN (34)</strong>: define o pino analógico onde o sensor MQ-135 está conectado (usando A0 no ESP32, que é GPIO 36 ou 39 em alguns modelos, mas 34 é um pino de uso comum para ADC).
-        </li>
-        <li>
-          <strong>setup\_wifi()</strong>: conecta o ESP32 à rede Wi-Fi.
-        </li>
-        <li>
-          <strong>PubSubClient</strong>: gerencia a publicação e assinatura de tópicos MQTT.
-        </li>
-        <li>
-          <strong>payload</strong>: envia os valores de temperatura, umidade e a leitura **bruta analógica** do MQ-135 em formato JSON.
-        </li>
-        <li>
-          <strong>loop()</strong>: repete a leitura e o envio a cada 5 segundos.
-        </li>
-      </ul>
+        <h3>4. Explicação do Código</h3>
+        <ul>
+          <li><strong>DHTPIN (15)</strong>: pino onde o DHT11 está conectado.</li>
+          <li><strong>MQ135_PIN (34)</strong>: pino analógico do MQ-135.</li>
+          <li><strong>setup_wifi()</strong>: conecta o ESP32 ao Wi-Fi.</li>
+          <li><strong>PubSubClient</strong>: gerencia a comunicação MQTT.</li>
+          <li><strong>payload</strong>: envia dados de temperatura, umidade e qualidade do ar.</li>
+          <li><strong>loop()</strong>: repete o envio a cada 5 segundos.</li>
+        </ul>
 
-      <h3>5. Comunicação MQTT</h3>
-      <p>
-        O protocolo MQTT é usado porque é leve e rápido, ideal para IoT. O broker Mosquitto atua como um
-        “servidor central”, recebendo os dados da estação e disponibilizando-os para qualquer dispositivo
-        inscrito no mesmo tópico.
-      </p>
+        <h3>5. Comunicação MQTT</h3>
+        <p>
+          O protocolo MQTT é leve e ideal para IoT. O broker Mosquitto atua como servidor central,
+          recebendo dados da estação e disponibilizando-os para dispositivos inscritos no mesmo tópico.
+        </p>
 
-      <h3>6. Testes e Visualização</h3>
-      <p>
-        Para testar, use o aplicativo <strong>MQTT Dashboard</strong> (Android/iOS) ou o site 
-        <a href="https://mqtt-explorer.com" target="_blank" rel="noopener noreferrer"> MQTT Explorer</a> 
-        para observar os dados sendo publicados no tópico <code>estacao/leituras</code>.
-      </p>
+        <h3>6. Testes e Visualização</h3>
+        <p>
+          Use o aplicativo <strong>MQTT Dashboard</strong> (Android/iOS) ou o site{" "}
+          <a href="https://mqtt-explorer.com" target="_blank" rel="noopener noreferrer">
+            MQTT Explorer
+          </a>{" "}
+          para observar os dados publicados no tópico <code>estacao/leituras</code>.
+        </p>
 
-      <h3>7. Conclusão</h3>
-      <p>
-        O software garante a coleta e o envio confiável das medições ambientais, integrando hardware e nuvem
-        em um projeto de automação completo, acessível e educativo.
-      </p>
-    </section>
-    <Footer />
+        <h3>7. Conclusão</h3>
+        <p>
+          O software garante a coleta e o envio confiável das medições ambientais, integrando hardware e nuvem
+          em um projeto de automação completo, acessível e educativo.
+        </p>
+      </section>
+      <Footer />
     </>
   );
 }
