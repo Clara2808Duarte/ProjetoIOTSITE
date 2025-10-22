@@ -1,114 +1,91 @@
-/* ------------------------------------------------------------------- */
-/* ESTILOS GLOBAIS DE LAYOUT E TIPOGRAFIA (Baseados no React App) */
-/* ------------------------------------------------------------------- */
-
-.font-sans {
-    font-family: 'Inter', sans-serif;
+.hardware-section {
+  padding: 10rem;
+  margin: 1.5rem;
 }
 
-/* Estilo Base para a Seção (section) */
-.section {
-    padding: 1.5rem; /* p-6 */
-    background-color: #f9fafb; /* bg-gray-50 */
-    border-radius: 0.75rem; /* rounded-xl */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
-    margin-bottom: 1.5rem;
+.hardware-title {
+  font-weight: 700;
+  color: #004d1a;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: -150px;
+  font-size: 2.3rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-/* Título Principal (h2) */
-.section h2 {
-    font-size: 1.875rem; /* text-3xl */
-    font-weight: 700; /* font-bold */
-    color: #1f2937; /* text-gray-800 */
-    border-bottom: 2px solid #3b82f6; /* border-b pb-2 */
-    padding-bottom: 0.5rem;
-    margin-top: 0;
-    margin-bottom: 1rem; /* mb-4 */
+.hardware-description {
+  font-size: 1.125rem;
+  color: #374151;
+  line-height: 1.75rem;
+  margin-bottom: 2rem;
 }
 
-/* Estilo da Grade (Grid e Responsividade) */
-.grid {
-    display: grid;
-    gap: 1.5rem; /* gap-6 */
-    text-align: center;
-    margin-top: 2rem; /* mt-8 */
-}
-@media (min-width: 768px) {
-    .md\:grid-cols-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+.hardware-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
 }
 
-/* ------------------------------------------------------------------- */
-/* ESTILOS DOS CARDS DE COMPONENTES */
-/* ------------------------------------------------------------------- */
 
-.p-4 { padding: 1rem; }
-.bg-white { background-color: #ffffff; }
-.rounded-lg { border-radius: 0.5rem; }
-.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); }
-.border-t-4 { border-top-width: 4px; }
+/* ---------- Cards ---------- */
 
-/* Títulos dos Cards (h3) */
-.section .grid h3 {
-    font-size: 1.25rem; /* text-xl */
-    font-weight: 600; /* font-semibold */
-    color: #1f2937; /* text-gray-800 */
-    margin-top: 0;
-    margin-bottom: 0.25rem; /* mb-1 */
+.hardware-card {
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid transparent;
 }
 
-/* Texto de Descrição dos Cards (p) */
-.section .grid p {
-    font-size: 0.875rem; /* text-sm */
-    color: #4b5563; /* text-gray-600 */
+.hardware-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
 }
 
-/* Cores de Borda dos Cards */
-.card-indigo { border-top-color: #6366f1; /* indigo-500 */ }
-.card-teal { border-top-color: #14b8a6; /* teal-500 */ }
-.card-blue { border-top-color: #3b82f6; /* blue-500 */ }
-
-/* Cores Específicas (LEDs - Yellow) */
-.section > .grid > div:nth-child(4) { 
-    border-top-color: #f59e0b; /* yellow-500 */
+.hardware-card-text {
+  font-size: 0.875rem;
+  color: #4b5563;
 }
 
-/* Cores Específicas (Protoboard - Gray) */
-.section > .grid > div:nth-child(5) { 
-    border-top-color: #9ca3af; /* gray-400 */
+/* ---------- Ícones ---------- */
+
+.hardware-icon {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto 0.5rem;
 }
 
-/* Estilo para Ícones (W-8 H-8) */
-.section svg {
-    width: 2rem;
-    height: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.5rem;
+/* ---------- Cores ---------- */
+
+.card-ver { border-top-color: #004d1a; width: 25vw;}
+.text-ver { color: #004d1a; }
+
+
+/* ---------- Alerta ---------- */
+
+.hardware-alert {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  margin-bottom: -150px;
+
 }
 
-/* ------------------------------------------------------------------- */
-/* ESTILOS DA SEÇÃO DE ALERTA (Tensão Crítica) */
-/* ------------------------------------------------------------------- */
-
-.mt-8 { margin-top: 2rem; }
-.pt-4 { padding-top: 1rem; }
-.border-t { border-top-width: 1px; }
-.border-gray-200 { border-top-color: #e5e7eb; }
-
-/* Título da Seção de Alerta (h4) */
-.section .border-t h4 {
-    font-size: 1.5rem; /* text-2xl */
-    font-weight: 600; /* font-semibold */
-    color: #1f2937; /* text-gray-800 */
-    margin-bottom: 0.75rem; /* mb-3 */
+.hardware-alert-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
 }
 
-/* Caixa de Alerta */
-.bg-red-50 { background-color: #fef2f2; }
-.p-3 { padding: 0.75rem; }
-.rounded-lg { border-radius: 0.5rem; }
-.border { border-width: 1px; }
-.border-red-300 { border-color: #fca5a5; }
-.text-red-700 { color: #b91c1c; }
+.hardware-alert-text {
+  background-color: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
