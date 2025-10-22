@@ -12,7 +12,7 @@ export default function SimulacaoWokwi() {
       <Nav />
       <div className="simulacao-container">
         <header className="simulacao-header">
-          <h1 className="titulo-principal">Simulação Wokwi</h1>
+          <h1 className="titulo-principal">SIMULAÇÃO WOKWI</h1>
         </header>
 
         <main className="simulacao-main">
