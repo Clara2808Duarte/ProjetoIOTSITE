@@ -1,7 +1,9 @@
 .navbar {
   background-color: #ffffff;
-  padding: 10px 30px 0 30px;
+  padding: 15px 30px; /* espaçamento interno da navbar */
   text-align: center;
+  border-bottom: 1px solid #ccc; /* apenas a linha inferior */
+  margin: 20px 0; /* espaço opcional entre a navbar e outros elementos */
 }
 
 .nav-list {
@@ -17,42 +19,35 @@
 .nav-item {
   position: relative;
   font-size: 18px;
-  color: #004d1a;
   font-weight: 500;
   cursor: pointer;
+}
+
+.nav-item a {
+  color: #007b33; /* cor dos links */
+  text-decoration: none; /* remove sublinhado azul */
   transition: color 0.3s ease;
 }
 
-.nav-item:hover {
-  color: #007b33;
+.nav-item a:hover {
+  color: #004d1a;
 }
 
 .nav-item::after {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -5px; /* linha do item abaixo do texto */
   left: 0;
   width: 0;
   height: 3px;
-  background-color: #004d1a;
+  background-color: #007b33;
   transition: width 0.3s ease;
   border-radius: 2px;
 }
 
-.nav-item:hover::after {
+.nav-item:hover::after,
+.nav-item a.active::after {
   width: 100%;
-}
-
-/* Item ativo */
-.nav-item.active::after {
-  width: 100%;
-}
-
-/* Linha inferior */
-.nav-divider {
-  border: none;
-  border-bottom: 1px solid #ccc;
-  margin-top: 8px;
 }
 
 /* Responsividade */

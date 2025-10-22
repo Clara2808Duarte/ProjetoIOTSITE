@@ -1,5 +1,5 @@
-import "./Nav.css";
 import { NavLink } from "react-router-dom";
+import "./Nav.css";
 
 export default function Navbar() {
   const menuItens = [
@@ -28,7 +28,6 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-      <hr className="nav-divider" />
     </nav>
   );
 }
