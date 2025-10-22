@@ -1,14 +1,11 @@
 import { Cpu, Thermometer, AirVent, Lightbulb, Grid3x3 } from "lucide-react";
 import "./Hardware.css";
-import Header from "../components/Header";
-import Navbar from "../components/Nav";
-import Footer from "../components/Footer";
+
 
 export default function Hardware() {
   return (
     <>
-      <Header />
-      <Navbar />
+   
       <section className="section bg-gray-50 p-6 rounded-xl shadow-lg">
         <h2 className="text-3xl font-bold text-gray-800 mb-4 border-b pb-2">
           Hardware: Componentes da Estação
@@ -87,7 +84,7 @@ export default function Hardware() {
           </p>
         </div>
       </section>
-      <Footer />
+  
     </>
   );
 }
