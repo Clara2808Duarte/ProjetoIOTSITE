@@ -3,6 +3,8 @@ import { Wifi, Thermometer, BarChart3 } from "lucide-react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import Header from "./Header";
+import "./Banner.css";
+import bannerImage from "../assets/BannerText.png"; 
 
 export default function Home() {
   return (
@@ -10,60 +12,88 @@ export default function Home() {
       <Header />
       <Nav />
 
-      <section className="section bg-gray-50 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl">
-        <h1 className="text-4xl font-extrabold text-blue-800 mb-4 border-b pb-2">
+      <section>
+        <div
+          className="banner"
+          style={{ backgroundImage: `url(${bannerImage})` }}
+        >
+          <p className="banner-text">
+            “Conectando tecnologia e natureza para um futuro mais sustentável.”
+          </p>
+        </div>
+        <h1 className="section-title">
           Estação de Monitoramento Ambiental IoT
         </h1>
-        <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-          Bem-vindo à documentação do nosso projeto de Internet das Coisas.
-          Nosso objetivo foi construir uma estação meteorológica compacta
+
+        <p>
+          Bem-vindo à documentação do nosso projeto de Internet das Coisas. Esse
+          é o desenvolvimento da construção uma estação meteorológica compacta
           utilizando o microcontrolador ESP32 para monitoramento em tempo real
           de variáveis ambientais críticas.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6 text-center mt-8">
-          {/* Card de Coleta de Dados */}
-          <div className="p-4 bg-white rounded-lg shadow-md border-t-4 border-teal-500 card-teal">
-            <Thermometer className="w-8 h-8 mx-auto text-teal-500 mb-2" />
-            <h3 className="font-semibold text-xl mb-1">Coleta de Dados</h3>
-            <p className="text-sm text-gray-600">
+        <div className="cards-container">
+          <div className="card card-v">
+            <Thermometer className="card-icon" />
+            <h3 className="card-title">Coleta de Dados</h3>
+            <p className="card-text">
               Sensores DHT11 e MQ-135 para Temperatura, Umidade e Qualidade do
               Ar.
             </p>
           </div>
-          {/* Card de Comunicação */}
-          <div className="p-4 bg-white rounded-lg shadow-md border-t-4 border-blue-500 card-blue">
-            <Wifi className="w-8 h-8 mx-auto text-blue-500 mb-2" />
-            <h3 className="font-semibold text-xl mb-1">Comunicação MQTT</h3>
-            <p className="text-sm text-gray-600">
+
+          <div className="card card-v">
+            <Wifi className="card-icon" />
+            <h3 className="card-title">Comunicação MQTT</h3>
+            <p className="card-text">
               Protocolo leve para transmissão eficiente e em tempo real via
               Wi-Fi.
             </p>
           </div>
-          {/* Card de Visualização */}
-          <div className="p-4 bg-white rounded-lg shadow-md border-t-4 border-indigo-500 card-indigo">
-            <BarChart3 className="w-8 h-8 mx-auto text-indigo-500 mb-2" />
-            <h3 className="font-semibold text-xl mb-1">Visualização Remota</h3>
-            <p className="text-sm text-gray-600">
+
+          <div className="card card-v">
+            <BarChart3 className="card-icon" />
+            <h3 className="card-title">Visualização Remota</h3>
+            <p className="card-text">
               Dados acessíveis via clientes MQTT (ex: MQTT Dashboard) em
               qualquer lugar.
             </p>
           </div>
         </div>
 
-        <div className="mt-8 pt-4 border-t">
-          <h4 className="text-2xl font-semibold text-gray-800 mb-3">
-            O Desafio Tecnológico
-          </h4>
-          <p className="text-gray-700">
+        <div>
+          <h4 className="section-challenge">O Desafio Tecnológico</h4>
+          <p>
             O maior desafio reside na necessidade de interligar componentes que
             operam em diferentes tensões (DHT11 a 3.3V, MQ-135 a 5V) a um único
             microcontrolador (ESP32) e garantir uma comunicação de rede robusta
             e um fluxo de dados estruturado (JSON).
           </p>
         </div>
+
+        <div>
+          <h4 className="section-challenge">Objetivo do Projeto</h4>
+          <p>
+            O WeatherNet é um projeto acadêmico desenvolvido com o objetivo de
+            criar uma estação meteorológica IoT compacta e inteligente, capaz de
+            monitorar em tempo real temperatura, umidade e qualidade do ar. O
+            sistema utiliza um ESP32 como unidade principal de processamento,
+            integrando os sensores DHT11 (operando a 3V) e MQ-135 (operando a
+            5V) para coleta dos dados ambientais. Além disso, controla LEDs de
+            status e alerta, e realiza a publicação das leituras em um servidor
+            Mosquitto (MQTT Broker), permitindo a visualização remota em
+            dispositivos móveis por meio de um cliente MQTT. Este projeto
+            representa a aplicação prática e multidisciplinar dos conhecimentos
+            adquiridos nas disciplinas de Sistemas Operacionais, Arquitetura de
+            Redes e IoT, Lógica de Programação e Algoritmos, e Levantamento de
+            Requisitos, evidenciando como diferentes áreas da tecnologia podem
+            se integrar para o desenvolvimento de soluções inteligentes e
+            conectadas.
+          </p>
+        </div>
       </section>
-      <Footer/>
+
+      <Footer />
     </>
   );
 }
