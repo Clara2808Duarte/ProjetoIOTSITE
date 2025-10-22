@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 // Páginas
 import Home from "./components/Home";
 import Projeto from "./pages/ExplicacaoProjeto";
-import Simulacao from "./pages/Simulacao0Wokwi";
+import Simulacao from "./pages/SimulacaoWokwi";
 import Hardware from "./pages/Hardware";
 import Software from "./pages/Software";
 import Perguntas from "./pages/PerguntasRespostas";
