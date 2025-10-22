@@ -1,4 +1,6 @@
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Nav";
 import Footer from "./components/Footer";
 
@@ -16,7 +18,6 @@ function App() {
   return (
     <Router>
       <Navbar />
-
       <main style={{ padding: "20px", minHeight: "70vh" }}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,7 +30,6 @@ function App() {
           <Route path="/equipe" element={<Equipe />} />
         </Routes>
       </main>
-
       <Footer />
     </Router>
   );
