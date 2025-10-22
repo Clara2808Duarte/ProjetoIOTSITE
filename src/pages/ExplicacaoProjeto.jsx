@@ -1,22 +1,23 @@
+import "./ExplicacaoProjeto.css";
 import DiagramaImg from "../assets/Fluxograma.png";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-
 export default function MonitoramentoIOT() {
   return (
-    <div>
+    <div className="monitoramento-page">
       <Header />
       <Nav />
-      <header>
-        <h1>Monitoramento Ambiental com IoT</h1>
+
+      <header className="monitoramento-header">
+        <h1 className="monitoramento-title">Monitoramento Ambiental com IoT</h1>
       </header>
 
-      <main>
-        {/* ========================= BLOCO 1 ========================= */}
-        <section id="problema" style={{ marginTop: "40px" }}>
-          <h2>O Problema</h2>
+      <main className="monitoramento-main">
+        {/* ===== BLOCO 1 ===== */}
+        <section id="problema" className="monitoramento-section">
+          <h2 className="monitoramento-subtitle">O Problema</h2>
           <p>
             Monitorar a <strong>temperatura</strong>, a <strong>umidade</strong> e a{" "}
             <strong>qualidade do ar</strong> é essencial para garantir ambientes
@@ -32,53 +33,39 @@ export default function MonitoramentoIOT() {
           </p>
         </section>
 
-        {/* ========================= IMAGENS DO BLOCO 1 ========================= */}
-        <section style={{ marginTop: "30px", textAlign: "center" }}>
-          <h3>Exemplos de Problemas na Indústria</h3>
+        {/* ===== IMAGENS BLOCO 1 ===== */}
+        <section className="monitoramento-section">
+          <h3 className="monitoramento-subsubtitle">
+            Exemplos de Problemas na Indústria
+          </h3>
           <p>
             A ausência de monitoramento pode gerar falhas em equipamentos, riscos à saúde dos funcionários e prejuízos na produção.
           </p>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "20px",
-              flexWrap: "wrap",
-              marginTop: "20px",
-            }}
-          >
-            <div>
-              <img
-                src="https://instrumentationtools.com/wp-content/uploads/2024/01/Temperature-Sensors-Fault-scaled.jpg"
-                alt="Falha em equipamentos industriais devido à variação de temperatura"
-                width="310"
-                style={{ borderRadius: "10px", boxShadow: "0 2px 8px rgba(0,0,0,0.2)" }}
-              />
-            </div>
 
-            <div>
-              <img
-                src="https://highmarkanalytics.com/wp-content/uploads/Gas-Leak-Detection.jpg"
-                alt="Ambiente industrial com alta concentração de gases tóxicos"
-                width="297"
-                style={{ borderRadius: "10px", boxShadow: "0 2px 8px rgba(0,0,0,0.2)" }}
-              />
-            </div>
+          <div className="monitoramento-image-grid">
+            <img
+              src="https://instrumentationtools.com/wp-content/uploads/2024/01/Temperature-Sensors-Fault-scaled.jpg"
+              alt="Falha em equipamentos industriais devido à variação de temperatura"
+              className="monitoramento-image"
+            />
 
-            <div>
-              <img
-                src="https://movitherm.com/wp-content/uploads/2022/07/industrial-warehouse-on-fire.jpg"
-                alt="Prejuízos na linha de produção causados por falta de controle ambiental"
-                width="300"
-                style={{ borderRadius: "10px", boxShadow: "0 2px 8px rgba(0,0,0,0.2)" }}
-              />
-            </div>
+            <img
+              src="https://highmarkanalytics.com/wp-content/uploads/Gas-Leak-Detection.jpg"
+              alt="Ambiente industrial com alta concentração de gases tóxicos"
+              className="monitoramento-image"
+            />
+
+            <img
+              src="https://movitherm.com/wp-content/uploads/2022/07/industrial-warehouse-on-fire.jpg"
+              alt="Prejuízos na linha de produção causados por falta de controle ambiental"
+              className="monitoramento-image"
+            />
           </div>
         </section>
 
-        {/* ========================= BLOCO 2 ========================= */}
-        <section id="solucao" style={{ marginTop: "40px" }}>
-          <h2>A Solução</h2>
+        {/* ===== BLOCO 2 ===== */}
+        <section id="solucao" className="monitoramento-section">
+          <h2 className="monitoramento-subtitle">A Solução</h2>
           <p>
             Com o avanço da <strong>Internet das Coisas (IoT)</strong>, tornou-se
             possível criar sistemas inteligentes de monitoramento ambiental.
@@ -95,9 +82,7 @@ export default function MonitoramentoIOT() {
             decisões imediatas.
           </p>
 
-          <h3> 
-              Qual a solução proposta?
-          </h3>
+          <h3 className="monitoramento-subsubtitle">Qual a solução proposta?</h3>
           <p>
             O problema de não monitorar temperatura, umidade e qualidade do ar em tempo real pode
             gerar desconforto térmico, riscos à saúde e falhas em equipamentos ou sistemas de ventilação.
@@ -110,31 +95,23 @@ export default function MonitoramentoIOT() {
             simular e testar o circuito e o código antes da implementação física, tornando o desenvolvimento mais seguro e
             eficiente. Com isso, oferecemos uma solução tecnológica que automatiza o monitoramento ambiental, facilitando a
             prevenção de problemas e contribuindo para ambientes mais saudáveis e controlados.
-         </p>
-
+          </p>
         </section>
 
-        {/* ========================= IMAGEM DO DIAGRAMA ========================= */}
-        <section id="diagrama" style={{ marginTop: "50px", textAlign: "center" }}>
-          <h2>Fluxo de Dados do Sistema</h2>
+        {/* ===== IMAGEM DO DIAGRAMA ===== */}
+        <section id="diagrama" className="monitoramento-section monitoramento-diagram">
+          <h2 className="monitoramento-subtitle">Fluxo de Dados do Sistema</h2>
           <p>Representação simplificada do funcionamento do monitoramento IoT:</p>
 
           <img
             src={DiagramaImg}
             alt="Diagrama do fluxo de dados IoT"
-            width="700"
-            style={{
-              borderRadius: "10px",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
-              marginTop: "15px",
-            }}
+            className="monitoramento-diagram-image"
           />
         </section>
       </main>
 
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }
