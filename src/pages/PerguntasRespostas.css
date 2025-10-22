@@ -37,11 +37,11 @@ h1 {
   transform-style: preserve-3d;
 }
 
-.cad-vira .card-inner {
+.card-inner.virado {
   transform: rotateY(180deg);
 }
 
-.card-frent,
+.card-frente,
 .card-tras {
   position: absolute;
   width: 100%;
@@ -56,13 +56,13 @@ h1 {
   transition: background 0.3s;
 }
 
-.card-frent {
+.card-frente {
   background: #ffffff;
   color: #333;
   font-weight: 600;
 }
 
-.card-frent:hover {
+.card-frente:hover {
   background: #e8f0ff;
 }
 
