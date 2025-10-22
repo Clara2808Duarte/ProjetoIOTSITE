@@ -1,31 +1,30 @@
 import "./Nav.css";
-import  { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
-
-  const [active, setActive] = useState("Home");
-
   const menuItens = [
-    "Home",
-    "Projeto",
-    "Simulação Wokwi",
-    "Hardware",
-    "Software",
-    "Perguntas e Respostas",
-    "Resultados",
-    "Equipe",
+    { nome: "Home", caminho: "/" },
+    { nome: "Projeto", caminho: "/projeto" },
+    { nome: "Simulação Wokwi", caminho: "/simulacao" },
+    { nome: "Hardware", caminho: "/hardware" },
+    { nome: "Software", caminho: "/software" },
+    { nome: "Perguntas e Respostas", caminho: "/perguntas" },
+    { nome: "Resultados", caminho: "/resultados" },
+    { nome: "Equipe", caminho: "/equipe" },
   ];
 
   return (
     <nav className="navbar">
       <ul className="nav-list">
         {menuItens.map((item) => (
-          <li
-            key={item}
-            className={`nav-item ${active === item ? "active" : ""}`}
-            onClick={() => setActive(item)}
-          >
-            {item}
+          <li key={item.nome} className="nav-item">
+            <NavLink
+              to={item.caminho}
+              className={({ isActive }) => (isActive ? "active" : "")}
+              end
+            >
+              {item.nome}
+            </NavLink>
           </li>
         ))}
       </ul>
@@ -33,4 +32,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
