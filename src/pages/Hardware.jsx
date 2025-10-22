@@ -11,7 +11,7 @@ export default function Hardware() {
       <Nav />
 
       <section className="hardware-section">
-        <h2 className="hardware-title">Hardware: Componentes da Estação</h2>
+        <h2 className="hardware-title">HARDWARE: COMPONENTES DA ESTAÇÃO</h2>
         <p className="hardware-description">
           O sistema é construído em torno de um ESP32, que atua como
           microcontrolador principal. A montagem requer a interconexão cuidadosa

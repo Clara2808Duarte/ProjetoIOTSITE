@@ -12,10 +12,10 @@
 
 .h1 {
   margin-bottom: 40px;
-  color: #007b33;
+  color: #004d1a;
   font-size: 2.4rem;
   font-weight: 900;
-  font-family: Libre Baskerville, serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
@@ -83,7 +83,6 @@
   justify-content: center;
   align-items: center;
   padding: 25px;
-  font-family: "Poppins", sans-serif;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.4s ease;
 }
