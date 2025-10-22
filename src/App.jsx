@@ -13,7 +13,7 @@ import Hardware from "./pages/Hardware";
 import Software from "./pages/Software";
 import Perguntas from "./pages/PerguntasRespostas";
 import Resultados from "./pages/Resultados";
-// import Equipe from "./pages/SobreNos";
+import Equipe from "./pages/SobreNos";
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
           <Route path="/software" element={<Software />} />
           <Route path="/perguntas" element={<Perguntas />} />
           <Route path="/resultados" element={<Resultados />} />
-          {/* <Route path="/equipe" element={<Equipe />} /> */}
+          <Route path="/equipe" element={<Equipe />} />
         </Routes>
       </main>
 
