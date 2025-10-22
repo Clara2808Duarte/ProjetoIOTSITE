@@ -1,31 +1,22 @@
-body {
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  min-height: 100vh;
-  padding: 40px;
-}
-
 /* Container principal */
 .cont {
   text-align: center;
   max-width: 1300px;
 }
 
-/* Título */
 h1 {
   margin-bottom: 30px;
   color: #007b33;
   font-size: 2.2rem;
-  font-weight: 700;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Grade com 4 colunas fixas */
 .cards-vira {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 100px;
+  gap: 120px;
   justify-items: center;
 }
 
@@ -33,16 +24,16 @@ h1 {
 .card {
   perspective: 1000px;
   cursor: pointer;
-  width: 17vw;
-  gap: 90px;
+  width: 100%;
+  max-width: 280px;
 }
 
 /* Parte interna (animação de virar) */
 .card-inner {
   position: relative;
-  width: 5vw;
-  height: 30vh;
-  transition: transform 0.8s;
+  width: 100%;
+  height: 240px;
+  transition: transform 0.6s;
   transform-style: preserve-3d;
 }
 
@@ -54,8 +45,8 @@ h1 {
 .card-frente,
 .card-tras {
   position: absolute;
-  width: 15vw;
-  height: 35vh;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
   backface-visibility: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
@@ -63,7 +54,7 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  transition: background 0.8s, transform 0.8s;
+  transition: background 0.4s, transform 0.3s;
 }
 
 /* Frente */
@@ -71,7 +62,9 @@ h1 {
   background: #ffffff;
   color: #007b33;
   font-weight: 600;
-  border: 2px solid #195030;
+  font-size: 0.8em;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #007b33;
 }
 
 .card-frente:hover {
@@ -83,6 +76,7 @@ h1 {
 .card-tras {
   background: #007b33;
   color: #ffffff;
+  font-family: "Poppins", sans-serif;
   transform: rotateY(180deg);
   font-size: 0.95rem;
   line-height: 1.5;

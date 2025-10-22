@@ -96,8 +96,7 @@ const perguntasRespostas = [
   },
   {
     pergunta: "19. Como adicionar o suporte ao ESP32 na IDE Arduino?",
-    resposta:
-      "Adicionando a URL do ESP32 no Gerenciador de Placas: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json",
+    resposta:"Adicionando a URL do ESP32 no Gerenciador de Placas",
   },
   {
     pergunta: "20. O que é o ESP32?",
@@ -113,6 +112,14 @@ const perguntasRespostas = [
     pergunta: "22. O ESP32 pode usar MQTT?",
     resposta:
       "Sim. Utilizando bibliotecas como PubSubClient, o ESP32 pode se conectar a brokers MQTT e trocar mensagens.",
+  },
+  {
+    pergunta: "23. Em um projeto IoT, por que o protocolo MQTT é considerado mais eficiente que o HTTP para comunicação entre dispositivos?",
+    resposta: "O MQTT é mais eficiente que o HTTP porque foi feito para dispositivos simples e economiza recursos: usa **menos banda, mantém conexão contínua e envia mensagens pequenas, enquanto o HTTP é mais pesado e consome mais energia e tempo.",
+  },
+  {
+    pergunta: "24. Qual é a função dos pinos GPIO do ESP32 em um projeto IoT e como eles podem ser simulados no Wokwi?",
+    resposta: "Os pinos GPIO do ESP32 permitem conectar e controlar sensores e componentes, funcionando como entrada ou saída. No Wokwi, eles podem ser simulados virtualmente, permitindo testar o circuito sem montagem física.",
   },
 ];
 
@@ -130,7 +137,10 @@ export default function PerguntasRespostas() {
     <Header />
     <Nav />
     <div className="cont">
+        <br/>
       <h1>PERGUNTAS E RESPOSTAS</h1>
+      <br/>
+      <br/>
       <div className="cards-vira">
         {perguntasRespostas.map((item, index) => (
           <div key={index} className="card" onClick={() => virarCard(index)}>
@@ -146,6 +156,12 @@ export default function PerguntasRespostas() {
         ))}
       </div>
     </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <Footer/>
     </>
   );
