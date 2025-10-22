@@ -1,9 +1,15 @@
 import "./Home.css";
 import { Wifi, Thermometer, BarChart3 } from "lucide-react";
+import Nav from "./Nav";
+import Footer from "./Footer";
+import Header from "./Header";
 
 export default function Home() {
   return (
     <>
+      <Header />
+      <Nav />
+
       <section className="section bg-gray-50 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl">
         <h1 className="text-4xl font-extrabold text-blue-800 mb-4 border-b pb-2">
           Estação de Monitoramento Ambiental IoT
@@ -57,6 +63,7 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

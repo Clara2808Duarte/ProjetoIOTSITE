@@ -1,5 +1,13 @@
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+
 function Software() {
   return (
+    <>
+
+    <Header />
+    <Nav />
     <section>
       <h2>Software</h2>
 
@@ -184,6 +192,8 @@ void loop() {
         em um projeto de automação completo, acessível e educativo.
       </p>
     </section>
+    <Footer />
+    </>
   );
 }
 
