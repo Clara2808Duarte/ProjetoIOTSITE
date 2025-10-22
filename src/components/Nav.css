@@ -4,6 +4,7 @@
   text-align: center;
   border-bottom: 1px solid #ccc; /* apenas a linha inferior */
   margin: 10px 0; /* espaço opcional entre a navbar e outros elementos */
+  font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 .nav-list {
@@ -18,7 +19,7 @@
 
 .nav-item {
   position: relative;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   cursor: pointer;
   margin-bottom: 10px;
