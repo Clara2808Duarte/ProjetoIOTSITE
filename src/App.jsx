@@ -1,13 +1,14 @@
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+// Componentes fixos
 import Navbar from "./components/Nav";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 // Páginas
 import Home from "./components/Home";
 import Projeto from "./pages/ExplicacaoProjeto";
-import Simulacao from "./pages/Simulacao0Wokwi";
+import Simulacao from "./pages/SimulacaoWokwi";
 import Hardware from "./pages/Hardware";
 import Software from "./pages/Software";
 import Perguntas from "./pages/PerguntasRespostas";
@@ -17,7 +18,9 @@ import Equipe from "./pages/SobreNos";
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Header />       {/* Header fixo no topo */}
+      <Navbar />       {/* Navbar centralizada para todas as páginas */}
+      
       <main style={{ padding: "20px", minHeight: "70vh" }}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,10 +33,10 @@ function App() {
           <Route path="/equipe" element={<Equipe />} />
         </Routes>
       </main>
-      <Footer />
+
+      <Footer /> {/* Rodapé fixo */}
     </Router>
   );
 }
 
 export default App;
-
