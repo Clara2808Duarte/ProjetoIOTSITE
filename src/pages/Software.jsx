@@ -50,85 +50,88 @@ function Software() {
 
 // --- Configurações de Sensores ---
 #define DHTPIN 15           // Pino de dados do DHT11
-#define DHTTYPE DHT11
-DHT dht(DHTPIN, DHTTYPE);
+#define DHTTYPE DHT11 // Tipo do sensor DHT
+DHT dht(DHTPIN, DHTTYPE); // Inicializa o DHT11
 
 #define MQ135_PIN 34        // Pino analógico para o MQ-135 (e.g., VP no ESP32)
 
 // --- Configuração do Wi-Fi ---
 // ATENÇÃO: Substitua "SUA_REDE_WIFI" e "SENHA_WIFI" pelas suas credenciais reais.
-const char* ssid = "SUA_REDE_WIFI";
-const char* password = "SENHA_WIFI";
+const char* ssid = "SUA_REDE_WIFI"; // Nome da rede Wi-Fi
+const char* password = "SENHA_WIFI"; // Senha da rede Wi-Fi
 
 // --- Configuração do broker MQTT (Mosquitto) ---
 const char* mqtt_server = "broker.hivemq.com"; // ou IP local do seu Mosquitto
-const int mqtt_port = 1883;
+const int mqtt_port = 1883; // Porta padrão do MQTT
 
-WiFiClient espClient;
-PubSubClient client(espClient);
+WiFiClient espClient; // Cliente Wi-Fi para o ESP32
+PubSubClient client(espClient); // Cliente MQTT
 
-void setup() {
-  Serial.begin(115200);
-  dht.begin();
+// Função para conectar ao Wi-Fi
+void setup_wifi();
+
+void setup() { // Configuração inicial
+  Serial.begin(115200); // Inicializa a comunicação serial
+  dht.begin(); // Inicializa o sensor DHT11
   
   // O pino analógico não precisa de d.begin(), apenas a leitura no loop
   // pinMode(MQ135_PIN, INPUT); // Não é estritamente necessário para analógico no ESP32, mas pode ser adicionado
   
-  setup_wifi();
-  client.setServer(mqtt_server, mqtt_port);
+  setup_wifi();// Conecta ao Wi-Fi
+  client.setServer(mqtt_server, mqtt_port); // Configura o broker MQTT
   // Define uma função de callback para mensagens recebidas (se fosse um subscriber)
-  // client.setCallback(callback); 
+  // client.setCallback(callback); // Não usado neste exemplo
 }
 
-void setup_wifi() {
-  delay(10);
-  Serial.println("Conectando ao Wi-Fi...");
-  WiFi.begin(ssid, password);
+void setup_wifi() { // Conecta ao Wi-Fi
+  delay(10); // Pequena pausa
+  Serial.println("Conectando ao Wi-Fi..."); // Mensagem de status
+  WiFi.begin(ssid, password); // Inicia a conexão
 
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
+  while (WiFi.status() != WL_CONNECTED) { // Aguarda até conectar
+    delay(500); // Espera meio segundo
+    Serial.print("."); // Indica progresso
   }
-  Serial.println("");
-  Serial.println("Wi-Fi conectado!");
-  Serial.print("IP: ");
-  Serial.println(WiFi.localIP());
+  Serial.println("");// Nova linha após conexão
+  Serial.println("Wi-Fi conectado!");// Mensagem de sucesso
+  Serial.print("IP: "); // Mostra o IP atribuído
+  Serial.println(WiFi.localIP()); // Exibe o IP
 }
 
 // Tenta reconectar ao MQTT broker
-void reconnect() {
-  while (!client.connected()) {
-    Serial.print("Tentando conexão MQTT...");
+void reconnect() { // Loop até conectar
+  while (!client.connected()) { // Enquanto não estiver conectado
+    Serial.print("Tentando conexão MQTT..."); // Mensagem de status
     // Tenta se conectar como "ESP32Client"
-    if (client.connect("ESP32Client")) {
-      Serial.println("Conectado!");
+    if (client.connect("ESP32Client")) { // Se conectar com sucesso
+      Serial.println("Conectado!"); // Mensagem de sucesso
       // Se fosse um subscriber, aqui seria onde você se inscreveria em tópicos:
-      // client.subscribe("estacao/comando"); 
+      // client.subscribe("estacao/comando"); // Exemplo de inscrição
     } else {
-      Serial.print("Falha, rc=");
-      Serial.print(client.state());
-      Serial.println(" Tentando novamente em 5s...");
-      delay(5000);
+      Serial.print("Falha, rc="); // Mensagem de falha
+      Serial.print(client.state()); // Mostra o código de erro
+      Serial.println(" Tentando novamente em 5s..."); // Mensagem de retry
+      delay(5000);// Espera 5 segundos antes de tentar novamente
     }
   }
 }
 
 void loop() {
-  if (!client.connected()) {
-    reconnect();
+  if (!client.connected()) { // Verifica se está conectado ao MQTT
+    reconnect();// Tenta reconectar se não estiver conectado
   }
   client.loop(); // Mantém a conexão MQTT ativa e processa callbacks
 
   // --- 1. Leitura dos sensores ---
-  float temperatura = dht.readTemperature();
-  float umidade = dht.readHumidity();
+  float temperatura = dht.readTemperature(); // Leitura da temperatura em Celsius
+  float umidade = dht.readHumidity(); // Leitura da umidade relativa
   int qualidade_ar_raw = analogRead(MQ135_PIN); // Leitura analógica do MQ-135
 
   // Checagem de erro do DHT
-  if (isnan(temperatura) || isnan(umidade)) {
-    Serial.println("Falha ao ler o sensor DHT11!");
+  if (isnan(temperatura) || isnan(umidade)) { // Verifica se a leitura falhou
+    Serial.println("Falha ao ler o sensor DHT11!"); // Mensagem de erro
     // Não envia dados falhos
-    delay(5000); 
+    delay(5000); // Aguarda 5 segundos antes da próxima tentativa
     return;
   }
 
@@ -140,8 +143,8 @@ void loop() {
                    ",\"qualidade_ar\":" + String(qualidade_ar_raw) + "}";
 
   // --- 3. Publicação ---
-  client.publish("estacao/leituras", payload.c_str());
-  Serial.println("Dados enviados: " + payload);
+  client.publish("estacao/leituras", payload.c_str()); // Publica no tópico "estacao/leituras"
+  Serial.println("Dados enviados: " + payload); // Log dos dados enviados
   
   // Aguarda 5 segundos antes da próxima leitura/envio
   delay(5000);
