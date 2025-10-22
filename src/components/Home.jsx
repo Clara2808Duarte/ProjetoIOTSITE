@@ -1,6 +1,6 @@
-import Header from "./components/Header";
-import Navbar from "./components/Nav";
-import Footer from "./components/Footer";
+import Header from "./Header";
+import Navbar from "./Nav";
+import Footer from "./Footer";
 import "./Home.css";
 import { Wifi, Thermometer, BarChart3 } from "lucide-react";
 
