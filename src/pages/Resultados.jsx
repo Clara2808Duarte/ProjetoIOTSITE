@@ -2,6 +2,7 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Video from "../assets/TesteLeds.mp4"
+import Foto from "../assets/FotoLed.jpeg";
 
 function Resultados() {
   return (
@@ -43,20 +44,11 @@ function Resultados() {
         */}
           <figure>
             <img
-              src="/caminho/para/imagem-prototipo-completo.jpg"
+              src={Foto}
               alt="Protótipo Final da Estação"
             />
             <figcaption>
               Vista frontal do protótipo montado, com sensores e ESP32 visíveis.
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              src="/caminho/para/imagem-detalhe-sensores.jpg"
-              alt="Detalhe da Placa de Protoboard e Sensores"
-            />
-            <figcaption>
-              Detalhe da conexão do DHT11 e MQ-135 no protoboard.
             </figcaption>
           </figure>
         </div>
