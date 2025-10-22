@@ -1,9 +1,11 @@
-import SimulacaoWokwi from "./pages/SimulaçãoWokwi.jsx";
+import SimulacaoWokwi from "./pages/SimulacaoWokwi";
+import Eplicaçãoprojeto from "./pages/ExplicacaoProjeto";
 
 function App() {
   return (
     <>
       <SimulacaoWokwi />
+      <Eplicaçãoprojeto />
     </>
   );
 }
