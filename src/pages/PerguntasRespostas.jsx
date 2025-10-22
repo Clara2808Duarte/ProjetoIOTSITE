@@ -143,7 +143,7 @@ export default function PerguntasRespostas() {
       <br/>
       <div className="cards-vira">
         {perguntasRespostas.map((item, index) => (
-          <div key={index} className="card" onClick={() => virarCard(index)}>
+          <div key={index} className="cardd" onClick={() => virarCard(index)}>
             <div className={`card-inner ${virado[index] ? "virado" : ""}`}>
               <div className="card-frente">
                 <h2>{item.pergunta}</h2>

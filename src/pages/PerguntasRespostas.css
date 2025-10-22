@@ -1,39 +1,68 @@
-/* Container principal */
+/* ====== CONTAINER PRINCIPAL ====== */
 .cont {
   text-align: center;
   max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   color: #007b33;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 900;
-  font-family: "Poppins", sans-serif;
+  font-family: Libre Baskerville, serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  margin-top: -25px;
 }
 
-/* Grade com 4 colunas fixas */
+h1::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #007b33;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ====== GRADE DE CARDS ====== */
 .cards-vira {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 120px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 60px;
   justify-items: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
 }
 
-/* Card base */
-.card {
+/* ====== CARD ====== */
+.cardd {
   perspective: 1000px;
   cursor: pointer;
   width: 100%;
+  padding: 1em;
   max-width: 280px;
+  transition: transform 0.3s ease;
 }
 
-/* Parte interna (animação de virar) */
+.cardd:hover {
+  transform: translateY(-10px);
+}
+
+/* ====== ANIMAÇÃO INTERNA ====== */
 .card-inner {
   position: relative;
   width: 100%;
-  height: 240px;
-  transition: transform 0.6s;
+  height: 280px;
+  transition: transform 0.8s ease;
   transform-style: preserve-3d;
 }
 
@@ -41,7 +70,7 @@ h1 {
   transform: rotateY(180deg);
 }
 
-/* Frente e verso do card */
+/* ====== FRENTE E VERSO ====== */
 .card-frente,
 .card-tras {
   position: absolute;
@@ -49,55 +78,50 @@ h1 {
   height: 100%;
   border-radius: 20px;
   backface-visibility: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
-  transition: background 0.4s, transform 0.3s;
+  padding: 25px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
 }
 
-/* Frente */
+/* ====== FRENTE ====== */
 .card-frente {
-  background: #ffffff;
+  background: linear-gradient(145deg, #ffffff, #f5f9f6);
+  border: 2px solid #007b33;
   color: #007b33;
   font-weight: 600;
-  font-size: 0.8em;
-  font-family: "Poppins", sans-serif;
-  border: 2px solid #007b33;
+  font-size: 1rem;
 }
 
 .card-frente:hover {
-  background: #e6f4ec;
-  transform: translateY(-5px);
+  background: linear-gradient(145deg, #e6f4ec, #ffffff);
+  box-shadow: 0 15px 25px rgba(0, 123, 51, 0.2);
 }
 
-/* Verso */
+/* ====== VERSO ====== */
 .card-tras {
-  background: #007b33;
+  background: linear-gradient(145deg, #007b33, #00994a);
   color: #ffffff;
-  font-family: "Poppins", sans-serif;
   transform: rotateY(180deg);
   font-size: 0.95rem;
-  line-height: 1.5;
-  padding: 20px;
+  line-height: 1.6;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Responsivo: em telas menores, diminui o número de colunas */
-@media (max-width: 1100px) {
-  .cards-vira {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 800px) {
-  .cards-vira {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .cards-vira {
-    grid-template-columns: 1fr;
-  }
+/* ====== EFEITO DE LUZ NO CARD ====== */
+.card-frente::before,
+.card-tras::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.3), transparent 60%);
+  pointer-events: none;
 }
