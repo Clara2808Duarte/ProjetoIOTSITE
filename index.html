@@ -1,11 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- ===== ÍCONE DO SITE (favicon) ===== -->
+    <!-- Coloque o arquivo "gatitas-icon.png" ou "favicon.ico" dentro da pasta public -->
+    <link rel="icon" type="image/png" href="/gatitas-icon.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>npx</title>
+
+    <!-- ===== TÍTULO E DESCRIÇÃO ===== -->
+    <title>Monitoramento IoT - Grupo 4 As Gatitas</title>
+    <meta
+      name="description"
+      content="Projeto de monitoramento ambiental utilizando IoT. Desenvolvido pelo Grupo 4 - As Gatitas, com sensores de temperatura, umidade e gases."
+    />
+
+    <!-- ===== METADADOS PARA COMPARTILHAMENTO ===== -->
+    <meta property="og:title" content="Monitoramento IoT - Grupo 4 As Gatitas" />
+    <meta
+      property="og:description"
+      content="Sistema inteligente de monitoramento ambiental com ESP32, sensores e MQTT."
+    />
+    <meta property="og:image" content="/preview.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- ===== PALAVRAS-CHAVE ===== -->
+    <meta
+      name="keywords"
+      content="IoT, ESP32, sensores, temperatura, umidade, gases, MQTT, Mosquitto, projeto escolar, As Gatitas"
+    />
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
