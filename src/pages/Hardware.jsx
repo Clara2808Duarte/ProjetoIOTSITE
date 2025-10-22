@@ -1,8 +1,8 @@
 import { Cpu, Thermometer, AirVent, Lightbulb, Grid3x3 } from "lucide-react";
 import "./Hardware.css";
-import Header from "./components/Header";
-import Navbar from "./components/Nav";
-import Footer from "./components/Footer";
+import Header from "../components/Header";
+import Navbar from "../components/Nav";
+import Footer from "../components/Footer";
 
 export default function Hardware() {
   return (
