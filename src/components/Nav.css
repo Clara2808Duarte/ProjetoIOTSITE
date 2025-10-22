@@ -3,7 +3,7 @@
   padding: 15px 30px; /* espaçamento interno da navbar */
   text-align: center;
   border-bottom: 1px solid #ccc; /* apenas a linha inferior */
-  margin: 20px 0; /* espaço opcional entre a navbar e outros elementos */
+  margin: 10px 0; /* espaço opcional entre a navbar e outros elementos */
 }
 
 .nav-list {
@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+   justify-content: space-around;
   gap: 30px;
   flex-wrap: wrap;
 }
@@ -21,6 +21,7 @@
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .nav-item a {
