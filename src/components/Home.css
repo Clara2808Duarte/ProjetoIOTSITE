@@ -1,0 +1,49 @@
+/* Configuração da Fonte (necessária caso o Tailwind não esteja totalmente carregado) */
+.font-sans {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilos Globais de Conteúdo e Layout (Extraídos do CSS do App.jsx) */
+
+/* Estilo Base para a Seção Home */
+.section {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo para Títulos Principais (h1) */
+.section h1 {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 800; /* font-extrabold */
+    color: #1e40af; /* text-blue-800 */
+    border-bottom: 2px solid #3b82f6; /* border-b pb-2 */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+/* Estilo para Subtítulos dos Cards (h3) */
+.section h3 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* gray-800 */
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo para Título do Desafio Tecnológico (h4) */
+.section h4 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* gray-800 */
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Classes Específicas dos Cards (para simular as classes Tailwind de cores de borda) */
+.card-teal { border-top-color: #14b8a6; /* teal-500 */ }
+.card-blue { border-top-color: #3b82f6; /* blue-500 */ }
+.card-indigo { border-top-color: #6366f1; /* indigo-500 */ }
+
