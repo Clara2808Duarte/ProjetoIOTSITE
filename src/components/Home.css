@@ -110,3 +110,69 @@
   width: 50vw;
   height: 50vh;
 }
+
+
+@media (min-width: 480px) and (max-width: 720px) {
+  /* Títulos */
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-challenge {
+    font-size: 1.3rem;
+  }
+
+  .section-obj {
+    font-size: 0.95rem;
+    width: 80%;
+    text-align: justify;
+    margin: 1rem auto;
+  }
+
+  /* Cards */
+  .cards-container {
+    gap: 0.75rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 45%;
+    padding: 0.75rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+
+  /* Banner */
+  .banner {
+    height: 120px;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+  }
+
+  .banner-text {
+    font-size: 1.2rem;
+  }
+
+  /* Flex Section */
+  .Flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .banner-image {
+    width: 80vw;
+    height: auto;
+  }
+}
