@@ -20,12 +20,12 @@ export default function MonitoramentoIOT() {
         <section id="problema" className="monitoramento-section">
           <h2 className="monitoramento-subtitle">O Problema</h2>
           <p>
-            Monitorar a <strong>temperatura</strong>, a <strong>umidade</strong> e a{" "}
-            <strong>qualidade do ar</strong> é essencial para garantir ambientes
-            mais saudáveis e seguros. Variações bruscas de temperatura e umidade
-            podem afetar o conforto térmico, equipamentos eletrônicos e até
-            processos industriais. Já a presença de gases nocivos pode indicar
-            riscos à saúde ou falhas em sistemas de ventilação.
+            Monitorar a <strong>temperatura</strong>, a <strong>umidade</strong>{" "}
+            e a <strong>qualidade do ar</strong> é essencial para garantir
+            ambientes mais saudáveis e seguros. Variações bruscas de temperatura
+            e umidade podem afetar o conforto térmico, equipamentos eletrônicos
+            e até processos industriais. Já a presença de gases nocivos pode
+            indicar riscos à saúde ou falhas em sistemas de ventilação.
           </p>
           <p>
             Em muitos locais, esses parâmetros não são acompanhados de forma
@@ -40,7 +40,8 @@ export default function MonitoramentoIOT() {
             Exemplos de Problemas na Indústria
           </h3>
           <p>
-            A ausência de monitoramento pode gerar falhas em equipamentos, riscos à saúde dos funcionários e prejuízos na produção.
+            A ausência de monitoramento pode gerar falhas em equipamentos,
+            riscos à saúde dos funcionários e prejuízos na produção.
           </p>
 
           <div className="monitoramento-image-grid">
@@ -68,11 +69,11 @@ export default function MonitoramentoIOT() {
         <section id="solucao" className="monitoramento-section">
           <h2 className="monitoramento-subtitle">A Solução</h2>
           <p>
-            Com o avanço da <strong>Internet das Coisas (IoT)</strong>, tornou-se
-            possível criar sistemas inteligentes de monitoramento ambiental.
-            Sensores coletam informações sobre temperatura, umidade e gases em
-            tempo real, enviando os dados para um microcontrolador, como o{" "}
-            <strong>ESP32</strong>.
+            Com o avanço da <strong>Internet das Coisas (IoT)</strong>,
+            tornou-se possível criar sistemas inteligentes de monitoramento
+            ambiental. Sensores coletam informações sobre temperatura, umidade e
+            gases em tempo real, enviando os dados para um microcontrolador,
+            como o <strong>ESP32</strong>.
           </p>
           <p>
             Esses dados são então transmitidos via protocolo{" "}
@@ -83,43 +84,60 @@ export default function MonitoramentoIOT() {
             decisões imediatas.
           </p>
 
-            <section id="solucao" className="monitoramento-section solucao">
-          <h2 className="monitoramento-subtitle">Projeto Montado com Cliente e Servidor</h2>
-          <p>Esta imagem representa o nosso projeto de monitoramento ambiental, que realiza 
-            a medição de temperatura, umidade e gás. 
-            Na parte traseira, estão os sensores responsáveis pela coleta dos dados, 
-            enquanto na parte frontal o dispositivo móvel (cliente) recebe as 
-            informações, indicando se o ambiente está seguro ou não, mostrando também os valores de medição
-            da temperatura e umidade.</p>
+          <section id="solucao" className="monitoramento-section solucao">
+            <h2 className="monitoramento-subtitle">
+              Projeto Montado com Cliente e Servidor
+            </h2>
+            <p>
+              Esta imagem representa o nosso projeto de monitoramento ambiental,
+              que realiza a medição de temperatura, umidade e gás. Na parte
+              traseira, estão os sensores responsáveis pela coleta dos dados,
+              enquanto na parte frontal o dispositivo móvel (cliente) recebe as
+              informações, indicando se o ambiente está seguro ou não, mostrando
+              também os valores de medição da temperatura e umidade.
+            </p>
 
-          <img
-            src={SoluçãoImg}
-            alt="Imagem do projeto montado com cliente e servidor"
-            className="solucaoimage"
-          />
-        </section> 
+            <img
+              src={SoluçãoImg}
+              alt="Imagem do projeto montado com cliente e servidor"
+              className="solucaoimage"
+            />
+          </section>
 
-
-          <h3 className="monitoramento-subsubtitle">Qual a solução proposta?</h3>
+          <h3 className="monitoramento-subsubtitle">
+            Qual a solução proposta?
+          </h3>
           <p>
-            O problema de não monitorar temperatura, umidade e qualidade do ar em tempo real pode
-            gerar desconforto térmico, riscos à saúde e falhas em equipamentos ou sistemas de ventilação.
-            Pensando nisso, nosso projeto surge como uma solução prática e eficiente por meio do uso da tecnologia IoT.
-            Utilizamos sensores para coletar informações importantes sobre o ambiente, como temperatura e umidade com o
-            sensor DHT11 e concentração de gases com o sensor MQ-2. Esses dados são processados pelo microcontrolador
-            ESP32 e enviados para um broker MQTT, gerenciado pelo Mosquitto, que distribui as informações para um dashboard
-            online de forma rápida e organizada. Isso permite acompanhar tudo em tempo real, receber alertas e agir
-            preventivamente caso os níveis ultrapassem limites seguros. Além disso, utilizamos a plataforma Wokwi para
-            simular e testar o circuito e o código antes da implementação física, tornando o desenvolvimento mais seguro e
-            eficiente. Com isso, oferecemos uma solução tecnológica que automatiza o monitoramento ambiental, facilitando a
-            prevenção de problemas e contribuindo para ambientes mais saudáveis e controlados.
+            O problema de não monitorar temperatura, umidade e qualidade do ar
+            em tempo real pode gerar desconforto térmico, riscos à saúde e
+            falhas em equipamentos ou sistemas de ventilação. Pensando nisso,
+            nosso projeto surge como uma solução prática e eficiente por meio do
+            uso da tecnologia IoT. Utilizamos sensores para coletar informações
+            importantes sobre o ambiente, como temperatura e umidade com o
+            sensor DHT11 e concentração de gases com o sensor MQ-2. Esses dados
+            são processados pelo microcontrolador ESP32 e enviados para um
+            broker MQTT, gerenciado pelo Mosquitto, que distribui as informações
+            para um dashboard online de forma rápida e organizada. Isso permite
+            acompanhar tudo em tempo real, receber alertas e agir
+            preventivamente caso os níveis ultrapassem limites seguros. Além
+            disso, utilizamos a plataforma Wokwi para simular e testar o
+            circuito e o código antes da implementação física, tornando o
+            desenvolvimento mais seguro e eficiente. Com isso, oferecemos uma
+            solução tecnológica que automatiza o monitoramento ambiental,
+            facilitando a prevenção de problemas e contribuindo para ambientes
+            mais saudáveis e controlados.
           </p>
         </section>
 
         {/* ===== IMAGEM DO DIAGRAMA ===== */}
-        <section id="diagrama" className="monitoramento-section monitoramento-diagram">
+        <section
+          id="diagrama"
+          className="monitoramento-section monitoramento-diagram"
+        >
           <h2 className="monitoramento-subtitle">Fluxo de Dados do Sistema</h2>
-          <p>Representação simplificada do funcionamento do monitoramento IoT:</p>
+          <p>
+            Representação simplificada do funcionamento do monitoramento IoT:
+          </p>
 
           <img
             src={DiagramaImg}
