@@ -84,8 +84,14 @@
 
 /* ====== Solução ====== */
 
+.solucao-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
 .solucaoimage {
-  width: 50%; 
+  width: 45%; 
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   margin-top: 15px;
   transition: transform 0.3s ease;
