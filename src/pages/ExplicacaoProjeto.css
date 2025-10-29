@@ -84,9 +84,8 @@
 
 /* ====== Solução ====== */
 
-.solucaoimagem {
-  width: 20%; /* tamanho reduzido */
-  max-width: 200px;
+.solucaoimage {
+  width: 50%; 
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   margin-top: 15px;
   transition: transform 0.3s ease;
