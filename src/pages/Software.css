@@ -161,5 +161,10 @@
     font-size: 1.8rem;
     margin-top: -80px;
   }
+
+  .teextoo {
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+  }
 }
 

@@ -11,7 +11,7 @@ function Software() {
       <section className="software-section">
         <h2 className="tituloo">SOFTWARE</h2>
 
-        <p>
+        <p className="teextoo">
           A parte de software do projeto é responsável por fazer toda a lógica e comunicação entre os sensores, 
           o microcontrolador ESP32 e o servidor MQTT. Ela garante que as leituras de temperatura, umidade e qualidade do ar 
           (MQ-135) sejam coletadas corretamente e enviadas pela internet para visualização em tempo real.
@@ -33,7 +33,7 @@ function Software() {
         </ul>
 
         <h3>2. Fluxo do Programa</h3>
-        <p>O código segue uma estrutura simples, mas eficiente:</p>
+        <p className="teextoo">O código segue uma estrutura simples, mas eficiente:</p>
         <ol>
           <li>Inicializa as bibliotecas e define as credenciais do Wi-Fi.</li>
           <li>Conecta o ESP32 à rede local.</li>
@@ -162,13 +162,13 @@ void loop() {
         </ul>
 
         <h3>5. Comunicação MQTT</h3>
-        <p>
+        <p className="teextoo">
           O protocolo MQTT é leve e ideal para IoT. O broker Mosquitto atua como servidor central,
           recebendo dados da estação e disponibilizando-os para dispositivos inscritos no mesmo tópico.
         </p>
 
         <h3>6. Testes e Visualização</h3>
-        <p>
+        <p className="teextoo">
           Use o aplicativo <strong>MQTT Dashboard</strong> (Android/iOS) ou o site{" "}
           <a href="https://mqtt-explorer.com" target="_blank" rel="noopener noreferrer">
             MQTT Explorer
@@ -177,7 +177,7 @@ void loop() {
         </p>
 
         <h3>7. Conclusão</h3>
-        <p>
+        <p className="teextoo">
           O software garante a coleta e o envio confiável das medições ambientais, integrando hardware e nuvem
           em um projeto de automação completo, acessível e educativo.
         </p>
