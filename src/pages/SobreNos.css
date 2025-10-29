@@ -126,3 +126,45 @@
   font-size: 0.95rem;
   line-height: 1.4;
 }
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  .contnr {
+    padding: 30px 15px;
+  }
+
+  .tit {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .subtit {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+  }
+
+  .gridd {
+    grid-template-columns: repeat(2, 1fr); /* de 4 para 2 colunas */
+    gap: 20px;
+  }
+
+  .cards {
+    padding: 15px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .imag-conter {
+    width: 20vw;
+    height: 10vh;
+    margin-bottom: 10px;
+  }
+
+  .nome {
+    font-size: 1.2rem;
+  }
+
+  .desc {
+    font-size: 1.2rem;
+  }
+}
