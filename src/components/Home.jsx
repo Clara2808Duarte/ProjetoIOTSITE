@@ -4,7 +4,7 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 import Header from "./Header";
 import "./Banner.css";
-import bannerImage from "../assets/BannerText.png"; 
+import bannerImage from "../assets/BannerText.png";
 import HardWare from "../assets/Hardware.jpeg";
 
 export default function Home() {
@@ -73,30 +73,46 @@ export default function Home() {
         </div>
 
         <div className="Flex">
-        <div className="section-obj">
-          <h4 className="section-challenge"> Objetivo do Projeto </h4>
-          <p>
-            O WeatherNet é um projeto acadêmico desenvolvido com o objetivo de
-            criar uma estação meteorológica IoT compacta e inteligente, capaz de
-            monitorar em tempo real temperatura, umidade e qualidade do ar. O
-            sistema utiliza um ESP32 como unidade principal de processamento,
-            integrando os sensores DHT11 (operando a 3V) e MQ-135 (operando a
-            5V) para coleta dos dados ambientais. Além disso, controla LEDs de
-            status e alerta, e realiza a publicação das leituras em um servidor
-            Mosquitto (MQTT Broker), permitindo a visualização remota em
-            dispositivos móveis por meio de um cliente MQTT. Este projeto
-            representa a aplicação prática e multidisciplinar dos conhecimentos
-            adquiridos nas disciplinas de Sistemas Operacionais, Arquitetura de
-            Redes e IoT, Lógica de Programação e Algoritmos, e Levantamento de
-            Requisitos, evidenciando como diferentes áreas da tecnologia podem
-            se integrar para o desenvolvimento de soluções inteligentes e
-            conectadas.
-          </p>
+          <div className="section-obj">
+            <h4 className="section-challenge"> Objetivo do Projeto </h4>
+            <p>
+              O WeatherNet é um projeto acadêmico desenvolvido com o objetivo de
+              criar uma estação meteorológica IoT compacta e inteligente, capaz
+              de monitorar em tempo real temperatura, umidade e qualidade do ar.
+              O sistema utiliza um ESP32 como unidade principal de
+              processamento, integrando os sensores DHT11 (operando a 3V) e
+              MQ-135 (operando a 5V) para coleta dos dados ambientais. Além
+              disso, controla LEDs de status e alerta, e realiza a publicação
+              das leituras em um servidor Mosquitto (MQTT Broker), permitindo a
+              visualização remota em dispositivos móveis por meio de um cliente
+              MQTT. Este projeto representa a aplicação prática e
+              multidisciplinar dos conhecimentos adquiridos nas disciplinas de
+              Sistemas Operacionais, Arquitetura de Redes e IoT, Lógica de
+              Programação e Algoritmos, e Levantamento de Requisitos,
+              evidenciando como diferentes áreas da tecnologia podem se integrar
+              para o desenvolvimento de soluções inteligentes e conectadas.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src={HardWare}
+              alt="Banner sustentabilidade"
+              className="banner-image"
+            />
+          </div>
         </div>
 
-        <div> 
-          <img src={HardWare} alt="Banner sustentabilidade" className="banner-image" />
-        </div>
+        <div className="section-obj-integr">
+          <h4 className="section-challenge"> Integração MultiDisciplinar </h4>
+          <p>
+            O projeto de monitoramento ambiental de temperatura, umidade e gás representa a integração de diversos conhecimentos adquiridos ao longo das disciplinas do curso.
+Por meio da Lógica de Programação e Algoritmos, foi possível desenvolver o código que realiza a leitura dos sensores e o envio dos dados coletados.
+Com o apoio de Sistemas Operacionais, compreendeu-se o funcionamento do microcontrolador e a forma como ele gerencia as tarefas e os processos de comunicação.
+A disciplina de Arquitetura de Redes e IoT contribuiu para estabelecer a conexão entre o dispositivo e o aplicativo cliente, permitindo a transmissão das informações por meio da rede.
+O Levantamento de Requisitos orientou a análise e definição das necessidades do projeto, garantindo que o sistema atendesse às demandas de segurança e confiabilidade.
+Por fim, o uso de IoT (Internet das Coisas) foi essencial para integrar todos esses elementos, tornando possível o monitoramento remoto do ambiente e a exibição, no celular do usuário, das condições de segurança em tempo real.
+          </p>
         </div>
       </section>
 

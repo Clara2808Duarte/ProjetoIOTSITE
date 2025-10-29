@@ -31,6 +31,15 @@
   margin-bottom: 20px;
 }
 
+.section-obj-integr {
+  font-size: 1em;
+  width: 100%;
+  color: #000000;
+  text-align: justify;
+  margin: 1rem 0 0.75rem 0;
+  margin-bottom: 20px;
+}
+
 /* Cards */
 .cards-container {
   display: flex;
@@ -48,16 +57,13 @@
   align-content: center;
   border-top: 4px solid;
   margin-bottom: 20px;
+  width: 25vw;
+  height: 20vh;
+  margin-bottom: 1rem;
 }
 
 .card-v { border-top-color: #007b33; }
 
-
-.card-icon {
-  width: 2rem;
-  height: 2rem;
-  margin-bottom: 0.5rem;
-}
 
 .card-title {
   font-size: 1.25rem;
