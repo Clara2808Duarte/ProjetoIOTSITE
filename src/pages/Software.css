@@ -117,7 +117,6 @@
 @media screen and (min-width: 480px) and (max-width: 720px) {
   .software-section {
     margin: 3rem 1.5rem;
-    padding: 1rem;
   }
 
   .software-section h2 {
@@ -144,17 +143,8 @@
     margin-left: 1rem;
   }
 
-  .software-section pre {
-    font-size: 0.85rem;
-    padding: 0.8rem;
-  }
-
   .software-section a {
     font-size: 0.95rem;
-  }
-
-  pre {
-    width: 80vw;
   }
 
   .tituloo {
@@ -168,3 +158,20 @@
   }
 }
 
+@media screen and (max-width: 750px) {
+  .software-section pre {
+    font-size: 1.1  em;
+    padding: 1.5em;
+    width: 92vw;
+    margin-left: -70px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .software-section pre {
+    font-size: 0.7em;
+    padding: 1.5em;
+    width: 92vw;
+    margin-left: -70px;
+  }
+}

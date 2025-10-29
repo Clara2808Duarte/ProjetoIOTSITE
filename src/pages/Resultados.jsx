@@ -87,11 +87,13 @@ function Resultados() {
             O monitor serial do ESP32 confirmou a conexão bem-sucedida e o envio
             de mensagens no formato JSON:
           </p>
-          <pre className="texto">{`Wi-Fi conectado!
+          <pre className="textooo">{`Wi-Fi conectado!
 IP: 192.168.1.100
 Tentando conexão MQTT... Conectado!
-Dados enviados: {"temperatura":25.70,"umidade":62.40,"qualidade_ar":1850}
-Dados enviados: {"temperatura":25.80,"umidade":62.30,"qualidade_ar":1855}
+Dados enviados: {"temperatura":25.70,"umidade":62.40,
+"qualidade_ar":1850}
+Dados enviados: {"temperatura":25.80,"umidade":62.30,
+"qualidade_ar":1855}
 ...`}</pre>
 
           <h4 className="subbtitulo">

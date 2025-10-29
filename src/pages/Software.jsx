@@ -75,7 +75,8 @@ void setup() { // Configuração inicial
   dht.begin(); // Inicializa o sensor DHT11
   
   // O pino analógico não precisa de d.begin(), apenas a leitura no loop
-  // pinMode(MQ135_PIN, INPUT); // Não é estritamente necessário para analógico no ESP32, mas pode ser adicionado
+  // pinMode(MQ135_PIN, INPUT); // Não é estritamente necessário para analógico 
+  // no ESP32, mas pode ser adicionado
   
   setup_wifi();// Conecta ao Wi-Fi
   client.setServer(mqtt_server, mqtt_port); // Configura o broker MQTT
@@ -137,13 +138,15 @@ void loop() {
 
   // --- 2. Montagem do Payload JSON (Corrigido o escape) ---
   // O formato JSON final deve ser: {"temperatura":X.X,"umidade":Y.Y,"qualidade_ar":Z}
-  // No C++ com String, os caracteres aspas (") precisam ser escapados com a barra invertida (\)
+  // No C++ com String, os caracteres aspas (") precisam ser escapados com a 
+  // barra invertida (\)
   String payload = "{\"temperatura\":" + String(temperatura) +
                    ",\"umidade\":" + String(umidade) + 
                    ",\"qualidade_ar\":" + String(qualidade_ar_raw) + "}";
 
   // --- 3. Publicação ---
-  client.publish("estacao/leituras", payload.c_str()); // Publica no tópico "estacao/leituras"
+  client.publish("estacao/leituras", payload.c_str()); 
+  // Publica no tópico "estacao/leituras"
   Serial.println("Dados enviados: " + payload); // Log dos dados enviados
   
   // Aguarda 5 segundos antes da próxima leitura/envio

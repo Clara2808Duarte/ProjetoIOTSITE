@@ -149,19 +149,11 @@
     width: 75vw;
     max-width: 500px;
   }
-
-  .solucaoimage {
-    width: 90vw; 
-  }
 }
 
 @media screen and (max-widht: 720px) {
   .monitoramento-diagram-image {
     width: 90vw;
     max-width: 800px;
-  }
-
-  .solucaoimage {
-    width: 100vw; 
   }
 }
