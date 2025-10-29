@@ -3,6 +3,11 @@ import "./Hardware.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import ESP from "../assets/ESP32.jpeg";
+import DHT from "../assets/DHT11.jpeg";
+import MQ from "../assets/MQ135.jpeg";
+import LED from "../assets/LEDS.jpeg";
+import BOARD from "../assets/Protoboard.jpeg";
 
 export default function Hardware() {
   return (
@@ -20,58 +25,64 @@ export default function Hardware() {
         </p>
 
         <div className="hardware-grid">
-          {/* Card ESP32 */}
-          <div className="hardware-card card-ver">
-            <Cpu className="hardware-icon text-ver" />
-            <h3 className="hardware-card-title">ESP32 Dev Module</h3>
-            <p className="hardware-card-text">
-              <strong>Microcontrolador Principal.</strong> Responsável pelo
-              processamento dos dados dos sensores e pela comunicação Wi-Fi e
-              MQTT. Tensão de operação de 3.3V.
-            </p>
-          </div>
+         
+            {/* Card ESP32 */}
+            <div className="hardware-card card-ver">
+              <Cpu className="hardware-icon text-ver" />
+              <h3 className="hardware-card-title">ESP32 Dev Module</h3>
+              <p className="hardware-card-text">
+                <strong>Microcontrolador Principal.</strong> Responsável pelo
+                processamento dos dados dos sensores e pela comunicação Wi-Fi e
+                MQTT. Tensão de operação de 3.3V.
+              </p>
+              <img className="Imagens" src={ESP} alt="Descrição da imagem" />
+            </div>
 
-          {/* Card DHT11 */}
-          <div className="hardware-card card-ver">
-            <Thermometer className="hardware-icon text-ver" />
-            <h3 className="hardware-card-title">DHT11</h3>
-            <p className="hardware-card-text">
-              <strong>Sensor de Temperatura/Umidade.</strong> Leitura digital de
-              baixo custo. Opera com alimentação de 3V a 5V (compatível com a
-              lógica de 3.3V do ESP32).
-            </p>
-          </div>
+            {/* Card DHT11 */}
+            <div className="hardware-card card-ver">
+              <Thermometer className="hardware-icon text-ver" />
+              <h3 className="hardware-card-title">DHT11</h3>
+              <p className="hardware-card-text">
+                <strong>Sensor de Temperatura/Umidade.</strong> Leitura digital
+                de baixo custo. Opera com alimentação de 3V a 5V (compatível com
+                a lógica de 3.3V do ESP32).
+              </p>
+              <img className="Imagens" src={DHT} alt="Descrição da imagem" />
+            </div>
 
-          {/* Card MQ-135 */}
-          <div className="hardware-card card-ver">
-            <AirVent className="hardware-icon text-ver" />
-            <h3 className="hardware-card-title">MQ-135</h3>
-            <p className="hardware-card-text">
-              <strong>Sensor de Qualidade do Ar.</strong> Utilizado para
-              detectar gases poluentes. Requer alimentação de 5V, demandando
-              atenção na interconexão.
-            </p>
-          </div>
+            {/* Card MQ-135 */}
+            <div className="hardware-card card-ver">
+              <AirVent className="hardware-icon text-ver" />
+              <h3 className="hardware-card-title">MQ-135</h3>
+              <p className="hardware-card-text">
+                <strong>Sensor de Qualidade do Ar.</strong> Utilizado para
+                detectar gases poluentes. Requer alimentação de 5V, demandando
+                atenção na interconexão.
+              </p>
+              <img className="Imagens" src={MQ} alt="Descrição da imagem" />
+            </div>
+  
+            {/* Card LEDs */}
+            <div className="hardware-card card-ver">
+              <Lightbulb className="hardware-icon text-ver" />
+              <h3 className="hardware-card-title">LEDs Indicadores</h3>
+              <p className="hardware-card-text">
+                Indicadores de status (ex: conexão Wi-Fi ativa) e alerta (ex:
+                qualidade do ar abaixo do limite).
+              </p>
+              <img className="Imagens" src={LED} alt="Descrição da imagem" />
+            </div>
 
-          {/* Card LEDs */}
-          <div className="hardware-card card-ver">
-            <Lightbulb className="hardware-icon text-ver" />
-            <h3 className="hardware-card-title">LEDs Indicadores</h3>
-            <p className="hardware-card-text">
-              Indicadores de status (ex: conexão Wi-Fi ativa) e alerta (ex:
-              qualidade do ar abaixo do limite).
-            </p>
-          </div>
-
-          {/* Card Protoboard */}
-          <div className="hardware-card card-ver">
-            <Grid3x3 className="hardware-icon text-ver" />
-            <h3 className="hardware-card-title">Protoboard e Cabos</h3>
-            <p className="hardware-card-text">
-              Utilizados para montagem temporária e conexões elétricas do
-              circuito.
-            </p>
-          </div>
+            {/* Card Protoboard */}
+            <div className="hardware-card card-ver">
+              <Grid3x3 className="hardware-icon text-ver" />
+              <h3 className="hardware-card-title">Protoboard e Cabos</h3>
+              <p className="hardware-card-text">
+                Utilizados para montagem temporária e conexões elétricas do
+                circuito.
+              </p>
+              <img className="Imagens" src={BOARD} alt="Descrição da imagem" />
+            </div>
         </div>
 
         <div className="hardware-alert">
