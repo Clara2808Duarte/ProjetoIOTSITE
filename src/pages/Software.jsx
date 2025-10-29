@@ -9,7 +9,7 @@ function Software() {
       <Header />
       <Nav />
       <section className="software-section">
-        <h2>SOFTWARE</h2>
+        <h2 className="tituloo">SOFTWARE</h2>
 
         <p>
           A parte de software do projeto é responsável por fazer toda a lógica e comunicação entre os sensores, 

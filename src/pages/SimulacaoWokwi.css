@@ -97,3 +97,61 @@
   text-align: center;
 }
 
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  .simulacao-header {
+    margin-bottom: 20px;
+  }
+
+  .titulo-principal {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+
+  .simulacao-main {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .simulacao-section {
+    margin-bottom: 40px;
+  }
+
+  .subtitulo,
+  .subbtitulo {
+    font-size: 1.3rem;
+    border-left-width: 4px;
+    padding-left: 8px;
+  }
+
+  .texto {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .video-container {
+    margin-top: 10px;
+  }
+
+  .video-wokwi {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .video-legenda {
+    font-size: 1.3rem;
+  }
+
+  .imagem-circuito {
+    width: 20vw;
+    max-width: 500px;
+  }
+
+  .link-wokwi {
+    font-size: 1rem;
+  }
+
+  .simulacao-footer {
+    margin-top: 30px;
+    font-size: 0.95rem;
+  }
+}

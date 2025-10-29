@@ -106,3 +106,60 @@
   font-weight: bold;
 }
 
+.tituloo {
+  color: #004d1a;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  .software-section {
+    margin: 3rem 1.5rem;
+    padding: 1rem;
+  }
+
+  .software-section h2 {
+    font-size: 1.9rem;
+    margin-top: -60px; /* reduz o recuo */
+    text-align: center;
+  }
+
+  .software-section h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 0.4rem;
+    border-left-width: 3px;
+  }
+
+  .software-section p {
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+  }
+
+  .software-section ul,
+  .software-section ol {
+    margin-left: 1rem;
+  }
+
+  .software-section pre {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+
+  .software-section a {
+    font-size: 0.95rem;
+  }
+
+  pre {
+    width: 80vw;
+  }
+
+  .tituloo {
+    font-size: 1.8rem;
+    margin-top: -80px;
+  }
+}
+
