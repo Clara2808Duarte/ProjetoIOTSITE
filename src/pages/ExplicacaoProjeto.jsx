@@ -1,5 +1,5 @@
 import "./ExplicacaoProjeto.css";
-import DiagramaImg from "../assets/Fluxograma.png";
+import DiagramaImg from "../assets/Fluxograma-v.png";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
