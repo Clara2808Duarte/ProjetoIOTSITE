@@ -12,7 +12,7 @@ function Resultados() {
       <Nav />
       <main className="simulacao-main">
         <section className="simulacao-section simulacao-header">
-          <h2 className="titulo-principal">Resultados e Conclusão</h2>
+          <h2 className="titulo-principal">RESULTADOS E CONCLUSÃO</h2>
           <p className="texto">
             Esta seção finaliza o projeto apresentando os resultados práticos
             obtidos. Mostramos o protótipo final em operação, a comprovação da
