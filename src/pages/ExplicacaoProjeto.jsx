@@ -96,12 +96,13 @@ export default function MonitoramentoIOT() {
               informações, indicando se o ambiente está seguro ou não, mostrando
               também os valores de medição da temperatura e umidade.
             </p>
-
-            <img
-              src={SoluçãoImg}
-              alt="Imagem do projeto montado com cliente e servidor"
-              className="solucaoimage"
-            />
+            <div className="solucao-container">
+              <img
+                src={SoluçãoImg}
+                alt="Imagem do projeto montado com cliente e servidor"
+                className="solucaoimage"
+              />
+            </div>
           </section>
 
           <h3 className="monitoramento-subsubtitle">
