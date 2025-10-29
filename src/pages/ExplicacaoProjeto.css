@@ -82,6 +82,23 @@
   transform: scale(1.02);
 }
 
+/* ====== Solução ====== */
+
+.solucaoimagem {
+  width: 20%; /* tamanho reduzido */
+  max-width: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  margin-top: 15px;
+  transition: transform 0.3s ease;
+}
+
+.solucao-imagem:hover {
+  transform: scale(1.02);
+}
+
+
+/* ====== Responsividade ====== */
+
 @media screen and (min-width: 480px) and (max-width: 720px) {
   .monitoramento-header {
     margin-bottom: 20px;

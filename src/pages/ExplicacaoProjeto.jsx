@@ -3,6 +3,7 @@ import DiagramaImg from "../assets/Fluxograma.png";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import SoluçãoImg from "../assets/Solucao.jpeg";
 
 export default function MonitoramentoIOT() {
   return (
@@ -81,6 +82,23 @@ export default function MonitoramentoIOT() {
             web — permitindo o acompanhamento em tempo real e a tomada de
             decisões imediatas.
           </p>
+
+            <section id="solucao" className="monitoramento-section solucao">
+          <h2 className="monitoramento-subtitle">Projeto Montado com Cliente e Servidor</h2>
+          <p>Esta imagem representa o nosso projeto de monitoramento ambiental, que realiza 
+            a medição de temperatura, umidade e gás. 
+            Na parte traseira, estão os sensores responsáveis pela coleta dos dados, 
+            enquanto na parte frontal o dispositivo móvel (cliente) recebe as 
+            informações, indicando se o ambiente está seguro ou não, mostrando também os valores de medição
+            da temperatura e umidade.</p>
+
+          <img
+            src={SoluçãoImg}
+            alt="Imagem do projeto montado com cliente e servidor"
+            className="solucaoimage"
+          />
+        </section> 
+
 
           <h3 className="monitoramento-subsubtitle">Qual a solução proposta?</h3>
           <p>
