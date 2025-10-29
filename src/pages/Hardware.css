@@ -23,10 +23,12 @@
 
 .hardware-grid {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap; /* permite que os itens quebrem de linha */
+  justify-content: center; /* centraliza os cards */
   gap: 1.5rem;
+  width: 80%;
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem auto;
 }
 
 
@@ -34,6 +36,7 @@
 
 .hardware-card {
   padding: 1rem;
+  width: 15vw;
   background-color: #fff;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
               0 2px 4px -2px rgba(0, 0, 0, 0.1);
@@ -60,9 +63,16 @@
   margin: 0 auto 0.5rem;
 }
 
+.Imagens {
+  width: 12vw;
+  height: 20vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /* ---------- Cores ---------- */
 
-.card-ver { border-top-color: #004d1a; width: 25vw;}
+.card-ver { border-top-color: #004d1a;}
 .text-ver { color: #004d1a; }
 
 
